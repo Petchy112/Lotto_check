@@ -1,20 +1,20 @@
 var mongoose = require('mongoose');
 var lottoSchema = mongoose.Schema({
-    firstPrize : {
-        type : String
-    },
-    secondPrize : {
-        type : String
-    },
-    thirdPrize : {
-        type :String
-    },
-    forthPrize : {
-        type :String
-    },
-    fifthPrize : {
-        type :String
-    }
+    firstPrize : 
+        num = {type : String}
+    ,
+    secondPrize : [
+        num = {type : String}
+    ],
+    thirdPrize : [
+        num = {type : String}
+    ],
+    forthPrize : [
+        num = {type : String}
+    ],
+    fifthPrize : [
+        num = {type : String}
+    ]
 })
 
 var Lotto = mongoose.model('Prize',lottoSchema)
