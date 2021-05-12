@@ -17,5 +17,14 @@ var lottoSchema = mongoose.Schema({
     ]
 })
 
+var newsSchema = mongoose.Schema({
+    News : [
+        header = { type :String },
+        picture = { type : Image }
+    ]
+})
 var Lotto = mongoose.model('Prize',lottoSchema)
+var news = mongoose.model('News',newsSchema)
+
+module.exports = news
 module.exports = Lotto
