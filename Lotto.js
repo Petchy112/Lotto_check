@@ -17,5 +17,5 @@ var lottoSchema = mongoose.Schema({
     }
 })
 
-var Lotto = mongoose.model('User',lottoSchema)
+var Lotto = mongoose.model('Prize',lottoSchema)
 module.exports = Lotto

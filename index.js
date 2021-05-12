@@ -6,15 +6,22 @@ const bodyparser = require('body-parser')
 
 var mongouri = 'mongodb+srv://admin:petch15918@cluster1.fs0qx.mongodb.net/Lotto?retryWrites=true&w=majority'
 mongoose.connect(mongouri,{useNewUrlParser:true}).then(
-    console.log('Connect DB')
+    () => {
+        console.log('Connect DB')
+    },
+    error => {
+        console.log(error);
+
+    }
 )
+
 
 app.use(bodyparser.urlencoded({extended:true}))
 app.use(bodyparser.json())
 
 
 var lotto = require('./router')
-app.use('/',lotto)
+app.use('/lotto',lotto)
 
 
 
