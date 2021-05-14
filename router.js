@@ -40,6 +40,7 @@ router.get('/check', async (req,res) => {
      });
 })
 
+
 router.post('/addnews',async(req,res) => {
     var env = new news(req.body);
     await env.save((err,newEnv)=>{
