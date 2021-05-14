@@ -20,8 +20,8 @@ app.use(bodyparser.urlencoded({extended:true}))
 app.use(bodyparser.json())
 
 
-var lotto = require('./router')
-app.use('/lotto',lotto)
+var web = require('./router')
+app.use('/',web)
 
 
 
